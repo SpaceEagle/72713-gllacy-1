@@ -53,6 +53,7 @@ textarea:focus {
 .container {
   width: 1200px;
   margin: auto;
+  padding: 6px 27px 25px 27px;
 }
 .btn {
   background: linear-gradient(180deg, #f26843, #e84c36);
@@ -65,9 +66,6 @@ textarea:focus {
 }
 .main-menu {
   display: flex;
-  padding-left: 27px;
-  padding-right: 27px;
-  padding-top: 6px;
 }
 .submenu > .active > a {
   color: white;
@@ -86,6 +84,8 @@ textarea:focus {
 }
 .site-navigation {
   display: flex;
+  max-width: 700px;
+  flex-wrap: wrap;
 }
 .site-navigation li,
 .user-navigation li {
@@ -157,6 +157,9 @@ hr {
 }
 .user-navigation {
   display: flex;
+  justify-content: flex-end;
+  max-width: 280px;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
@@ -300,6 +303,10 @@ hr {
   font-weight: bold;
   color: #323232;
 }
+
+.info-block {
+  margin-top: -10px;
+}
 .info {
   text-align: right;
   color: #ffffff;
@@ -324,14 +331,29 @@ strong {
   font-weight: bold;
   text-decoration: none;
 }
+.promo {
+  display: flex;
+  margin-bottom: 40px;
+}
+.promo-item {
+  width: 510px;
+  height: 206px;
+  padding-left: 20px;
+  padding-top: 23px;
+  padding-right: 30px;
+  border-radius: 15px;
+}
 .promo-raspberry {
+  position: relative;
   background-color: #6e1326;
   background-image: url("../img/background-rasp.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-right: 27px;
 }
 .promo-chocolat {
+  position: relative;
   background-color: #40271d;
   background-image: url("../img/background-chocolat.jpg");
   background-repeat: no-repeat;
@@ -340,21 +362,37 @@ strong {
 }
 .promo-title {
   font-size: 35px;
-  line-height: 41px;
+  line-height: 35px;
   font-weight: bold;
   color: #ffffff;
+  margin: 0px;
 }
 .promo-info {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  margin-bottom: 28px
 }
 .buy-btn-promo {
+  position: absolute;
+  bottom: 23px;
+  right: 21px;
+  display: block;
+  height: 34px;
+  padding-top: 12px;
+  padding-left: 22px;
+  padding-right: 23px;
+  background: linear-gradient(180deg, #f26843, #e84c36);
   font-size: 18px;
-  line-height: 24px;
   text-decoration: none;
 }
-
+.catalog-item li:hover {
+  background-color: #9bafa3;
+  padding-top: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 5px;
+}
 .catalog-item-name {
   font-size: 16px;
   line-height: 22px;
@@ -373,7 +411,7 @@ strong {
   line-height: 25px;
 }
 .catalog-item-img {
-  border-radius: 60%;
+  border-radius: 266px;
 }
 .features {
   background-color: #e4d7bc;
@@ -407,17 +445,6 @@ strong {
 }
 .news {
   background-image: url("../img/background-news.png");
-}
-.promo {
-  display: flex;
-  padding-left: 27px;
-  padding-right: 27px;
-}
-.promo-item {
-  max-width: 520px;
-  margin-right: 27px;
-  padding-left: 20px;
-  padding-right: 30px;
 }
 .catalog-item {
   display: flex;
