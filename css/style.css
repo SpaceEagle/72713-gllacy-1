@@ -52,7 +52,7 @@ textarea:focus {
     }
 .container {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 6px 27px 25px 27px;
 }
 .btn {
@@ -416,17 +416,65 @@ strong {
 .features {
   background-color: #e4d7bc;
   background-image: url("../img/wafer.jpg");
-  max-width: 1093px;
-  margin-left: 27px;
-  padding-top: 6px;
-  padding-left: 20px;
+  width: 1093px;
+  padding-top: 27px;
+  padding-left: 18px;
   padding-right: 33px;
-  height: 306px;
+  border-radius: 15px;
 }
 .feature-name {
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
+}
+.features-item {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 21px;
+  margin-left: 57px;
+}
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.feature-list li {
+  position: relative;
+  width: 480px;
+  padding-bottom: 24px;
+}
+.feature-list:last-child {
+  padding-left: 87px;
+}
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -57px;
+  width: 49px;
+  height: 49px;
+}
+.ice-cream::before {
+  background-image: url("../img/ice-cream.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.eco::before {
+  background-image: url("../img/eco.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cow::before {
+  background-image: url("../img/cow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.thermometer::before {
+  background-image: url("../img/thermometer.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .article-title a {
   font-size: 24px;
@@ -455,13 +503,6 @@ strong {
   list-style: none;
   width: 267px;
   margin-right: 27px;
-}
-.features-item {
-  display: flex;
-}
-.feature-list {
-  display: flex;
-  flex-direction: column;
 }
 .news-distribution {
   display: flex;
