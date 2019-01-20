@@ -20,7 +20,6 @@
                 <a href="#" class="site-navigator active">Каталог</a>
                 <ul class="submenu">
                   <li><a href="#" class="submenu-new first-border"><b>Новинки</b></a></li>
-                  <hr>
                   <li class="active"><a class="catalog-creamy">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лёд</a></li>
@@ -53,39 +52,39 @@
                   </div>
                 </div>
               </li>
-              <li><a class="basket-btn goods" href="#">2 товара</a></li>
+              <li><a class="basket-btn goods" href="#">2 товара</a>
+                <div class="basket-form user-form">
+                  <table class="basket">
+                    <tr>
+                      <td class="btn-del">
+                        <button class="item-del" type="reset"></button>
+                      </td>
+                      <td class="ice-logo">
+                        <img class="ice-item" src="img/mini-ice-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                      </td>
+                      <td class="ice-description">Пломбир с апельсиновым джемом</td>
+                      <td class="parametr">1,5 кг х <span class="money">200 руб</span></td>
+                      <td class="result-item">300 руб</td>
+                    </tr>
+                    <tr>
+                      <td class="btn-del">
+                        <button class="item-del" type="reset"></button>
+                      </td>
+                      <td class="ice-logo">
+                        <img class="ice-item" src="img/mini-ice-2.jpg" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                      </td>
+                      <td class="ice-description">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="parametr">1,5 кг х <span class="money">300 руб</span></td>
+                      <td class="result-item">450 руб</td>
+                    </tr>
+                    <tr>
+                      <td class="result" colspan="5"><b>Итого: 750 руб.</b></td>
+                    </tr>
+                  </table>
+                  <a class="checkout-btn btn" href="#">Оформить заказ</a>
+                </div>
+              </li>
             </ul>
-
-            <div class="basket-form user-form">
-              <table class="basket">
-                <tr>
-                  <td class="btn-del">
-                    <button class="item-del" type="reset">X</button>
-                  </td>
-                  <td class="ice-logo">
-                    <img class="ice-item" src="img/mini-ice-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                  </td>
-                  <td class="ice-description">Пломбир с апельсиновым джемом</td>
-                  <td class="parametr">1,5 кг х <span class="money">200 руб</span></td>
-                  <td class="result-item">300 руб</td>
-                </tr>
-                <tr>
-                  <td class="btn-del">
-                    <button class="item-del" type="reset">X</button>
-                  </td>
-                  <td class="ice-logo">
-                    <img class="ice-item" src="img/mini-ice-2.jpg" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                  </td>
-                  <td class="ice-description">Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td class="parametr">1,5 кг х <span class="money">300 руб</span></td>
-                  <td class="result-item">450 руб</td>
-                </tr>
-                <tr>
-                  <td class="result" colspan="5"><b>Итого: 750 руб.</b></td>
-                </tr>
-              </table>
-              <a class="checkout-btn btn" href="#">Оформить заказ</a>
-            </div>
           </nav>
           <div class="header-info">
             <ul class="breadcrumbs">
@@ -106,7 +105,7 @@
           <h1 class="catalog-title">Сливочное мороженое</h1>
 
           <section class="filters">
-            <form class="filters-form" action="#" method="post">
+            <form class="filters-form" action="#" method="get">
               <fieldset class="sorting">
                 <legend>Сортировка:</legend>
                 <select>
@@ -338,7 +337,7 @@
                 <li><a href="#">О производстве</a></li>
               </ul>
               <ul class="menu-documents">
-                <li><a href="#">Наши документы</a></b></li>
+                <li><b><a href="#">Наши документы</a></b></li>
                 <li><a href="#">Экологические стандарты</a></li>
               </ul>
             </nav>

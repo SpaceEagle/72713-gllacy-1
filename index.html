@@ -23,7 +23,6 @@
               <a href="#" class="site-navigator">Каталог</a>
               <ul class="submenu">
                 <li><a href="#" class="submenu-new first-border"><b>Новинки</b></a></li>
-                <hr>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лёд</a></li>
@@ -251,7 +250,7 @@
             <li><a href="#">О производстве</a></li>
           </ul>
           <ul class="menu-documents">
-            <li><a href="#">Наши документы</a></b></li>
+            <li><b><a href="#">Наши документы</a></b></li>
             <li><a href="#">Экологические стандарты</a></li>
           </ul>
         </nav>
@@ -277,5 +276,27 @@
       </form>
     </div>
 </div>
+<script>
+  var link = document.querySelector(".feedback-form-btn");
+  var popup = document.querySelector(".feedback-form");
+  var close = popup.querySelector(".modal-close");
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("feedback-form-show");
+    login.focus();
+  });
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("feedback-form-show");
+  });
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("feedback-form-show")) {
+        popup.classList.remove("feedback-form-show");
+      }
+    }
+  });
+</script>
   </body>
 </html>
