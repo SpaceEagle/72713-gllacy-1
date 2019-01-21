@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -22,7 +22,7 @@
             <li class="catalog">
               <a href="#" class="site-navigator">Каталог</a>
               <ul class="submenu">
-                <li><a href="#" class="submenu-new first-border"><b>Новинки</b></a></li>
+                <li><a href="#" class="submenu-new first-border">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лёд</a></li>
@@ -38,15 +38,18 @@
                 <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
               </svg>
             </a>
-              <form class="search-form user-form" action="#" method="get">
-                <input type="text" name="search-field" placeholder="Что ищем?">
+              <form class="search-form user-form" action="https://echo.htmlacademy.ru" method="get" name="search">
+                <label class="visually-hidden" for="search-field">Поиск</label>
+                <input type="text" name="search-field" id="search-field" placeholder="Что ищем?">
               </form>
             </li>
             <li><a class="login-btn" href="#">Вход</a>
               <div class="login-form user-form">
-                <form action="#" method="post">
-                  <input type="text" name="login-field" placeholder="Электронная почта"><br>
-                  <input type="password" name="password-field" placeholder="Пароль">
+                <form action="https://echo.htmlacademy.ru" method="post" name="login">
+                  <label class="visually-hidden" for="login-field">E-mail</label>
+                  <input type="text" name="login-field" id="login-field" placeholder="Электронная почта">
+                  <label class="visually-hidden" for="password-field">Пароль</label>
+                  <input type="password" name="password-field" id="password-field" placeholder="Пароль">
                   <button type="submit" name="enter-btn" class="go-btn btn">Войти</button>
                 </form>
                 <div class="supporting-links">
@@ -58,10 +61,10 @@
             <li><a class="basket-btn" href="#">Пусто</a></li>
           </ul>
         </nav>
-          <p class="info">
-            С 10 до 20, ежедневно<br>
-            <strong class="tel">8 812 450-25-25</strong>
-          </p>
+          <div class="info-block">
+            <p class="info">С 10 до 20, ежедневно</p>
+            <p><a class="tel">8 812 450-25-25</a></p>
+          <div>
       </div>
     </header>
 
@@ -75,15 +78,15 @@
           </div>
           <ul class="slider-list">
             <li class="slider-item slide" id="slide1">
-              <h2 class="slider-title">Крем-брюле и пломбир<br> с малиновым джемом</h2>
+              <h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
               <a class="buy-btn btn" href="#">Давайте оба!</a>
             </li>
             <li class="slider-item slide" id="slide2">
-              <h2 class="slider-title">Шоколадный пломбир<br> и лимонный сорбет</h2>
+              <h2 class="slider-title">Шоколадный пломбир и лимонный сорбет</h2>
               <a class="buy-btn btn" href="#">Давайте оба!</a>
             </li>
             <li class="slider-item slide" id="slide3">
-              <h2 class="slider-title">Пломбир с помадкой<br> и клубничный щербет</h2>
+              <h2 class="slider-title">Пломбир с помадкой и клубничный щербет</h2>
               <a class="buy-btn btn" href="#">Давайте оба!</a>
             </li>
           </ul>
@@ -111,38 +114,30 @@
         </section>
       </div>
         <section class="section-catalog">
-          <ul class="catalog-item">
-            <li class="item-hit">
+          <ul class="catalog-list">
+            <li class="catalog-item item-hit">
               <img class="catalog-item-img" src="img/catalog-item-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <b class="price">310 &#8381;<span class="kg">/кг</span></b>
-              <h3 class="catalog-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              <div class="catalog-item-wrapper">
-                <a class="view btn" href="#">Быстрый просмотр</a>
-              </div>
+              <h3 class="catalog-item-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+              <a class="view btn" href="#">Быстрый просмотр</a>
             </li>
-            <li class="item-hit">
+            <li class="catalog-item item-hit">
               <img class="catalog-item-img" src="img/catalog-item-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <b class="price">380 &#8381;<span class="kg">/кг</span></b>
-              <h3 class="catalog-item-name">Сливочно-кофейное с кусочками шоколада</h3>
-              <div class="catalog-item-wrapper">
-                <a class="view btn" href="#">Быстрый просмотр</a>
-              </div>
+              <h3 class="catalog-item-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+              <a class="view btn" href="#">Быстрый просмотр</a>
             </li>
-            <li class="item-hit">
+            <li class="catalog-item item-hit">
               <img class="catalog-item-img" src="img/catalog-item-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <b class="price">355 &#8381;<span class="kg">/кг</span></b>
-              <h3 class="catalog-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              <div class="catalog-item-wrapper">
-                <a class="view btn" href="#">Быстрый просмотр</a>
-              </div>
+              <h3 class="catalog-item-name"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+              <a class="view btn" href="#">Быстрый просмотр</a>
             </li>
-            <li class="item-hit">
+            <li class="catalog-item item-hit">
               <img class="catalog-item-img" src="img/catalog-item-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               <b class="price">415 &#8381;<span class="kg">/кг</span></b>
-              <h3 class="catalog-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
-              <div class="catalog-item-wrapper">
-                <a class="view btn" href="#">Быстрый просмотр</a>
-              </div>
+              <h3 class="catalog-item-name"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+              <a class="view btn" href="#">Быстрый просмотр</a>
             </li>
           </ul>
         </section>
@@ -190,13 +185,11 @@
         <div class="news-distribution">
           <article class="news">
             <h3 class="news-title">Новое в нашем блоге</h3>
-            <h2 class="article-title">
               <a class="article-title" href="#">
                 10 способов сервировки<br>
                 фруктовых щербетов к<br>
                 столу
               </a>
-            </h2>
           </article>
           <section class="distribution">
             <div class="wrapper">
@@ -206,7 +199,7 @@
                 что у нас происходит. Обещаем не спамить и не
                 слать всякой ненужной ерунды. Честно =)
               </p>
-              <form action="#" method="post">
+              <form action="https://echo.htmlacademy.ru" method="post" name="subsription">
                 <input type="text" name="mail" placeholder="Электронная почта" class="e-mail">
                 <input type="submit" value="Отправить" class="discription-send btn">
               </form>
@@ -268,35 +261,16 @@
     <div class="feedback-form">
       <button class="modal-close" type="button">Закрыть</button>
       <b class="feedback-title">Мы обязательно вам ответим!</b>
-      <form class="feedback-field" action="#" method="post">
-        <input type="text" name="name" placeholder="Как вас зовут?">
-        <input type="text" name="e-mail" placeholder="Ваша почта для ответа?">
-        <textarea name="feedback" rows="5">Напишите что-нибудь...</textarea>
+      <form class="feedback-field" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="name-field">Имя</label>
+        <input type="text" name="name" id="name-field" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="e-mail">E-mail</label>
+        <input type="text" name="e-mail" id="e-mail" placeholder="Ваша почта для ответа?">
+        <textarea name="feedback" rows="5" placeholder="Напишите что-нибудь..."></textarea>
         <button class="send-button btn" type="submit" name="send-btn">Отправить</button>
       </form>
     </div>
 </div>
-<script>
-  var link = document.querySelector(".feedback-form-btn");
-  var popup = document.querySelector(".feedback-form");
-  var close = popup.querySelector(".modal-close");
-  link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("feedback-form-show");
-    login.focus();
-  });
-  close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("feedback-form-show");
-  });
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("feedback-form-show")) {
-        popup.classList.remove("feedback-form-show");
-      }
-    }
-  });
-</script>
+<script src="js/script.min.js"></script>
   </body>
 </html>
