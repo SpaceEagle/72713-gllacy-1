@@ -1,36 +1,31 @@
 var link = document.querySelector(".feedback-form-btn");
 var popup = document.querySelector(".feedback-form");
+var mask = document.querySelector(".modal-mask");
 var close = popup.querySelector(".modal-close");
 var form = popup.querySelector("form");
 var name = popup.querySelector("[name=name]");
-var email = popup.querySelector("[name=e-mail]");
+var email = popup.querySelector("[name=email]");
 var feedback = popup.querySelector("[name=feedback]");
 
 var storageName = localStorage.getItem("name");
-var storageEmail = localStorage.getItem("mail");
+var storageEmail = localStorage.getItem("email");
 
-var isStorageSupport = true;
-  var storage = "";
-
-  try {
-    storage = localStorage.getItem("name");
-  } catch (err) {
-    isStorageSupport = false;
-  }
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("feedback-form-show");
+  mask.classList.add("visible");
 
   if (storageName && storageEmail) {
       name.value = storageName;
-      mail.value = storageEmail;
+      email.value = storageEmail;
     }
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("feedback-form-show");
+  mask.classList.remove("visible");
   popup.classList.remove("feedback-form-error");
 });
 
@@ -53,6 +48,7 @@ form.addEventListener("submit", function (evt) {
       if (popup.classList.contains("feedback-form-show")) {
         popup.classList.remove("feedback-form-show");
         popup.classList.remove("feedback-form-error");
+        mask.classList.remove("visible");
       }
     }
   });
